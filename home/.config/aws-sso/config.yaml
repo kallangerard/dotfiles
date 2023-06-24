@@ -1,0 +1,45 @@
+SSOConfig:
+  ${AWS_SSO_1}:
+    StartUrl: ${AWS_SSO_1_START_URL}
+    SSORegion: ${AWS_SSO_1_REGION}
+DefaultRegion: ap-southeast-2
+ConsoleDuration: 720
+CacheRefresh: 168
+Threads: 5
+AutoConfigCheck: true
+UrlAction: granted-containers
+ConfigProfilesUrlAction: granted-containers
+UrlExecCommand:
+  - /Applications/Firefox.app/Contents/MacOS/firefox
+  - "%s"
+LogLevel: warn
+HistoryLimit: 20
+HistoryMinutes: 1440
+ProfileFormat: "{{ .SSO }}:{{ .AccountAlias }}:{{ .RoleName }}"
+AccountPrimaryTag:
+  - AccountName
+  - AccountAlias
+  - Email
+PromptColors:
+  descriptionbgcolor: Turquoise
+  descriptiontextcolor: Black
+  inputbgcolor: DefaultColor
+  inputtextcolor: DefaultColor
+  prefixbackgroundcolor: DefaultColor
+  prefixtextcolor: Blue
+  previewsuggestionbgcolor: DefaultColor
+  previewsuggestiontextcolor: Green
+  scrollbarbgcolor: Cyan
+  scrollbarthumbcolor: LightGrey
+  selecteddescriptionbgcolor: DarkGray
+  selecteddescriptiontextcolor: White
+  selectedsuggestionbgcolor: DarkGray
+  selectedsuggestiontextcolor: White
+  suggestionbgcolor: Cyan
+  suggestiontextcolor: White
+ListFields:
+  - AccountId
+  - AccountAlias
+  - RoleName
+  - Profile
+  - ExpiresStr

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Trim new lines and copy to clipboard
+alias copy="tr -d '\n' | pbcopy"
+
+# Show/hide hidden files in Finder
+alias showhiddenfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidehiddenfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# URL-encode strings
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+
+# Disable Spotlight
+alias spotlightoff="sudo mdutil -a -i off"
+# Enable Spotlight
+alias spotlighton="sudo mdutil -a -i on"
+
+# Terraform
+alias tf='terraform'
+alias terrafrom='terraform'
