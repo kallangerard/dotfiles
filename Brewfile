@@ -10,7 +10,7 @@ brew "findutils"
 
 # Install a modern version of Bash.
 brew "bash"
-brew "bash-completion2"
+brew "bash-completion"
 
 # ZSH
 brew "zsh"
@@ -38,6 +38,7 @@ brew "glab" # GitLab CLI
 brew "maven"
 brew "bluesnooze"
 brew "libpq"
+brew "nvm"
 
 cask "github"
 cask "git-credential-manager-core"
