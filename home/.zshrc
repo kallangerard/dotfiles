@@ -106,65 +106,21 @@ export PATH=$PATH:$BREW_PREFIX/libexec/gnubin
 export PATH=$PATH:$(brew --prefix findutils)/libexec/gnubin
 
 for file in ~/.{exports,aliases,functions}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+    [ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
 
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 prompt_context() {
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-  fi
+    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+        prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+    fi
 }
 
-autoload -U +X bashcompinit && bashcompinit
+autoload -Uz +X compinit && compinit
+autoload -Uz +X bashcompinit && bashcompinit
+
 complete -o nospace -C /opt/homebrew/Cellar/tfenv/3.0.0/versions/1.3.5/terraform terraform
-# BEGIN_AWS_SSO_CLI
-
-# AWS SSO requires `bashcompinit` which needs to be enabled once and
-# only once in your shell.  Hence we do not include the two lines:
-#
-# autoload -Uz +X compinit && compinit
-# autoload -Uz +X bashcompinit && bashcompinit
-#
-# If you do not already have these lines, you must COPY the lines 
-# above, place it OUTSIDE of the BEGIN/END_AWS_SSO_CLI markers
-# and of course uncomment it
-
-__aws_sso_profile_complete() {
-     local _args=${AWS_SSO_HELPER_ARGS:- -L error}
-    _multi_parts : "($(/usr/local/bin/aws-sso ${=_args} list --csv Profile))"
-}
-
-aws-sso-profile() {
-    local _args=${AWS_SSO_HELPER_ARGS:- -L error}
-    if [ -n "$AWS_PROFILE" ]; then
-        echo "Unable to assume a role while AWS_PROFILE is set"
-        return 1
-    fi
-    eval $(/usr/local/bin/aws-sso ${=_args} eval -p "$1")
-    if [ "$AWS_SSO_PROFILE" != "$1" ]; then
-        return 1
-    fi
-}
-
-aws-sso-clear() {
-    local _args=${AWS_SSO_HELPER_ARGS:- -L error}
-    if [ -z "$AWS_SSO_PROFILE" ]; then
-        echo "AWS_SSO_PROFILE is not set"
-        return 1
-    fi
-    eval $(/usr/local/bin/aws-sso ${=_args} eval -c)
-}
-
-compdef __aws_sso_profile_complete aws-sso-profile
-complete -C /usr/local/bin/aws-sso aws-sso
-
-# END_AWS_SSO_CLI
 
 fpath=($fpath ~/.zsh/completion)
-autoload -U compinit
-compinit
-
-
