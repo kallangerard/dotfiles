@@ -13,10 +13,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 sh install-ohmyzsh.sh
 
 #Sync dotfiles
-rsync -aivP home/ ~/
-# Install prettier
-#npm i --global prettier
-# Install yarn
-#npm i --global yarn
+sh sync.sh
 
 echo "Done installing dotfiles!"

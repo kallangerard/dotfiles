@@ -177,7 +177,7 @@ defaultBranch = main
 [git-town]
 pull-branch-strategy = merge
 
-[user "https://github.com"]
+[user]
 
 name = Kallan Gerard
 email = 36556982+kallangerard@users.noreply.github.com
