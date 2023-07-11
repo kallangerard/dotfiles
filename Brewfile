@@ -35,6 +35,7 @@ brew "maven"
 brew "libpq"
 brew "nvm"
 brew "gh"
+brew "direnv"
 
 cask "istat-menus"
 cask "iterm2"
