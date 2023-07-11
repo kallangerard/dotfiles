@@ -34,8 +34,7 @@ brew "glab" # GitLab CLI
 brew "maven"
 brew "libpq"
 brew "nvm"
-
-cask "github"
+brew "gh"
 
 cask "istat-menus"
 cask "iterm2"
