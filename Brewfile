@@ -36,6 +36,7 @@ brew "libpq"
 brew "nvm"
 brew "gh"
 brew "direnv"
+brew "tfenv"
 
 cask "istat-menus"
 cask "iterm2"
