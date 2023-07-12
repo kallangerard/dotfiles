@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# oh-my-zsh START
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -74,6 +76,8 @@ plugins=(git vscode zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
+# oh-my-zsh END
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -88,29 +92,14 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 eval "$(direnv hook zsh)"
 export BREW_PREFIX=$(brew --prefix)
 export PATH=$PATH:$BREW_PREFIX/libexec/gnubin
 export PATH=$PATH:$(brew --prefix findutils)/libexec/gnubin
 
-for file in ~/.{exports,aliases,functions}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file"
-done
-unset file
-
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+source $HOME/.exports
+source $HOME/.aliases
+source $HOME/.functions
 
 prompt_context() {
     if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
