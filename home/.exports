@@ -48,5 +48,3 @@ export GOPATH=$HOME/go
 GOROOT="$(brew --prefix golang)/libexec"
 export GOROOT
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-
-export DEFAULT_USER=kallan
