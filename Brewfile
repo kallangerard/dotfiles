@@ -19,7 +19,6 @@ brew "wget"
 brew "gnupg"
 cask "gpg-suite"
 
-
 # Install more recent versions of some macOS tools.
 brew "grep"
 brew "openssh"
@@ -37,6 +36,8 @@ brew "nvm"
 brew "gh"
 brew "direnv"
 brew "tfenv"
+
+cask "aws-vault"
 
 cask "istat-menus"
 cask "iterm2"

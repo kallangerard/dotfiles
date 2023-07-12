@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "Syncing dotfiles"
-rsync -aivP home/ ~/
+rsync -avh --no-perms home/ ~/
