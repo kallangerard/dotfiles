@@ -45,6 +45,3 @@ cask "slack"
 cask "visual-studio-code"
 cask "vlc"
 cask "slack"
-
-tap "microsoft/git"
-cask "git-credential-manager-core"

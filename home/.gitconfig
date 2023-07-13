@@ -181,10 +181,6 @@ pull-branch-strategy = merge
 name = Kallan Gerard
 email = 36556982+kallangerard@users.noreply.github.com
 
-[credential]
-helper =
-helper = /usr/local/bin/git-credential-manager
-
 [credential "https://dev.azure.com"]
 useHttpPath = true
 
