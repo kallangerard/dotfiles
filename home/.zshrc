@@ -114,6 +114,6 @@ prompt_context() {
 autoload -Uz +X compinit && compinit
 autoload -Uz +X bashcompinit && bashcompinit
 
-complete -o nospace -C /opt/homebrew/Cellar/tfenv/3.0.0/versions/1.3.5/terraform terraform
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 fpath=($fpath ~/.zsh/completion)
