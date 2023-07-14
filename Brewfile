@@ -36,6 +36,7 @@ brew "nvm"
 brew "gh"
 brew "direnv"
 brew "tfenv"
+brew "kubectl"
 
 cask "aws-vault"
 
