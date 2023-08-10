@@ -47,3 +47,4 @@ cask "slack"
 cask "visual-studio-code"
 cask "vlc"
 cask "slack"
+brew bind
