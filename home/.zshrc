@@ -105,6 +105,10 @@ source $HOME/.exports
 source $HOME/.aliases
 source $HOME/.functions
 
+[ -r "$HOME/.zsh.local" ] && [ -f "$HOME/.zsh.local" ] && source "$HOME/.zsh.local"
+
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
 prompt_context() {
     if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
         prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
