@@ -18,3 +18,6 @@ alias spotlighton="sudo mdutil -a -i on"
 # Terraform
 alias tf='terraform'
 alias terrafrom='terraform'
+
+# Kubernetes
+alias k='kubectl'
