@@ -122,3 +122,7 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 fpath=($fpath ~/.zsh/completion)
 
+# asdf
+. "$(brew --prefix asdf)/libexec/asdf.sh"
+
+source <(kubectl completion zsh)

@@ -49,11 +49,7 @@ GOROOT="$(brew --prefix golang)/libexec"
 export GOROOT
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
-# kubectl completion
-eval "$(kubectl completion zsh)"
 
-# asdf
-. "$(brew --prefix asdf)/libexec/asdf.sh"
 
 export CLOUDSDK_ROOT_DIR=$HOME/.google-cloud-sdk
 export PATH="$CLOUDSDK_ROOT_DIR/bin:$PATH"
