@@ -1,5 +1,6 @@
 # Install GNU core utilities (those that come with macOS are outdated).
 brew "coreutils"
+brew "curl"
 
 # Install some other useful utilities like `sponge`.
 brew "moreutils"
@@ -11,6 +12,7 @@ brew "bash-completion"
 
 # ZSH
 brew "zsh"
+brew "fzf" 
 
 # Install `wget` with IRI support.
 brew "wget"
@@ -47,4 +49,7 @@ cask "slack"
 cask "visual-studio-code"
 cask "vlc"
 cask "slack"
-brew bind
+brew "bind"
+
+# kubectl version manager
+brew "asdf"

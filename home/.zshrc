@@ -121,3 +121,6 @@ autoload -Uz +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 fpath=($fpath ~/.zsh/completion)
+
+# kubectl version manager
+. "$(brew --prefix asdf)/libexec/asdf.sh"
