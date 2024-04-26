@@ -45,7 +45,7 @@ export EDITOR='vim'
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 export GOPATH=$HOME/go
-GOROOT="$(brew --prefix golang)/libexec"
+GOROOT=/usr/local/go
 export GOROOT
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
@@ -55,3 +55,6 @@ export CLOUDSDK_ROOT_DIR=$HOME/.google-cloud-sdk
 export PATH="$CLOUDSDK_ROOT_DIR/bin:$PATH"
 # The next line enables shell command completion for gcloud.
 . $CLOUDSDK_ROOT_DIR/completion.zsh.inc
+
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
