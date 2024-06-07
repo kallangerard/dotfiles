@@ -86,3 +86,21 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX
 }
+
+function branch_to_title() {
+    # Get the current branch name
+    branch_name=$(git rev-parse --abbrev-ref HEAD)
+
+    # Split the branch name into elements
+    IFS='/' read -r -A elements <<< "$branch_name"
+
+    elements[2]=$(echo ${elements[2]} | tr '-' ' ')
+
+    sentence=$(IFS=' '; echo "${elements[*]}")
+
+    echo $sentence
+}
+
+function ghpr() {
+    
+}
