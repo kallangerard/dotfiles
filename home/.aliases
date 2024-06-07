@@ -22,4 +22,4 @@ alias terrafrom='terraform'
 # Kubernetes
 alias k='kubectl'
 
-alias ghpr="gh pr create --title="$(branch_to_title)" --fill-verbose"
+alias ghpr="gh pr create --title=\"$(branch_to_title)\" --fill-verbose"
