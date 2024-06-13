@@ -101,6 +101,15 @@ function branch_to_title() {
     echo $sentence
 }
 
-function ghpr() {
-    
+function certexpiry() {
+
+	ssl_host=$1
+
+	# if ssl_host has no :port, append :443
+	if [[ $ssl_host != *":"* ]]; then
+		ssl_host="$ssl_host:443"
+	fi
+
+	echo "Q" | openssl s_client -no-interactive -connect $ssl_host 2>/dev/null | openssl x509 -noout -dates -in /dev/stdin
+
 }
