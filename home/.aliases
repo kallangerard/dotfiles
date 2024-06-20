@@ -24,4 +24,4 @@ alias k='kubectl'
 
 alias ghpr='gh pr create --title="$(branch_to_title)" --fill-verbose'
 
-alias sp='code ~/scratchpad.md'
+alias sp='code ~/scratchpad.txt'
