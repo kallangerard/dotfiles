@@ -49,6 +49,7 @@ GOROOT=/usr/local/go
 export GOROOT
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
+export PATH=$HOME/.local/bin:$PATH
 
 
 export CLOUDSDK_ROOT_DIR=$HOME/.google-cloud-sdk
