@@ -41,10 +41,7 @@ brew "tfenv"
 brew "kubectl"
 brew "jq"
 
-cask "aws-vault"
-
 cask "istat-menus"
-cask "iterm2"
 cask "slack"
 cask "visual-studio-code"
 cask "vlc"

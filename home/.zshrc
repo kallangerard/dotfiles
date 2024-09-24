@@ -126,3 +126,4 @@ fpath=($fpath ~/.zsh/completion)
 . "$(brew --prefix asdf)/libexec/asdf.sh"
 
 source <(kubectl completion zsh)
+source <(fzf --zsh)
