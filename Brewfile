@@ -38,7 +38,6 @@ brew "nvm"
 brew "gh"
 brew "direnv"
 brew "tfenv"
-brew "kubectl"
 brew "jq"
 
 cask "istat-menus"
@@ -48,5 +47,7 @@ cask "vlc"
 cask "slack"
 brew "bind"
 
+brew "kubectl"
 # kubectl version manager
 brew "asdf"
+brew "kubectx"
