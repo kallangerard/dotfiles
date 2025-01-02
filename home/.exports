@@ -59,3 +59,6 @@ export PATH="$CLOUDSDK_ROOT_DIR/bin:$PATH"
 
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Pipe man pages to bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"

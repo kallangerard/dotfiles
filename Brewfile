@@ -39,6 +39,8 @@ brew "gh"
 brew "direnv"
 brew "tfenv"
 brew "jq"
+brew "bat" # cat replacement
+brew "dust" # du replacement
 
 cask "istat-menus"
 cask "slack"
