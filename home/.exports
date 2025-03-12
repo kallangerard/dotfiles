@@ -57,3 +57,5 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Pipe man pages to bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+export GOBIN=${GOBIN:-$(go env GOPATH)/bin}
