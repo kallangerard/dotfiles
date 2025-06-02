@@ -17,11 +17,10 @@ alias spotlighton="sudo mdutil -a -i on"
 
 # Terraform
 alias tf='terraform'
-alias terrafrom='terraform'
 
 # Kubernetes
 alias k='kubectl'
 
 alias ghpr='gh pr create --title="$(branch_to_title)" --fill-verbose'
 
-alias sp='code ~/scratchpad.txt'
+alias sp='code --goto ~/scratchpad.txt:1'

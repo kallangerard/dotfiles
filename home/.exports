@@ -16,7 +16,7 @@ export HISTFILESIZE="${HISTSIZE}"
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth'
 
-# Prefer US English and use UTF-8.
+# Prefer AU English and use UTF-8.
 export LANG='en_AU.UTF-8'
 export LC_ALL='en_AU.UTF-8'
 
@@ -34,28 +34,14 @@ export GPG_TTY
 # Hide the “default interactive shell is now zsh” warning on macOS.
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-
 export EDITOR='vim'
 
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-
 export PATH=$HOME/.local/bin:$PATH
-
-
-export CLOUDSDK_ROOT_DIR=$HOME/.google-cloud-sdk
-export PATH="$CLOUDSDK_ROOT_DIR/bin:$PATH"
-# The next line enables shell command completion for gcloud.
-. $CLOUDSDK_ROOT_DIR/completion.zsh.inc
-
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Pipe man pages to bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# Set GOBIN if not already set
 export GOBIN=${GOBIN:-$(go env GOPATH)/bin}

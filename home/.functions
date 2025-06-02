@@ -113,3 +113,17 @@ function certexpiry() {
 	echo "Q" | openssl s_client -no-interactive -connect $ssl_host 2>/dev/null | openssl x509 -noout -dates -in /dev/stdin
 
 }
+
+generate_deterministic_number() {
+  local input_string=$1
+  local min=$2
+  local max=$3
+
+  local hash_value=$(echo -n "$input_string" | cksum | cut -d ' ' -f 1)
+  local range=$((max - min + 1))
+
+  # Map the hash value to the range 2000-65000
+  local number=$((hash_value % range + min))
+
+  echo $number
+}

@@ -24,18 +24,15 @@ cask "gpg-suite"
 # Install more recent versions of some macOS tools.
 brew "grep"
 brew "openssh"
-cask "spotify"
 brew "screen"
 
 brew "ack"
 brew "git"
 brew "git-town"
 brew "git-lfs"
-brew "glab" # GitLab CLI
 brew "maven"
-brew "libpq"
 brew "nvm"
-brew "gh"
+brew "gh" # github CLI
 brew "direnv"
 brew "tfenv"
 brew "jq"
